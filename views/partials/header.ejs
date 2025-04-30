@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title"><%= title %></h1>
+        <!-- <p>Seja bem-vindo ao catálogo de filmes!</p> -->
+        <nav class="header-nav">
+            <a href="/">Home</a>
+            <a href="/movies/now_playing">Em Cartaz</a>
+            <a href="/movie/top_rated">Mais Avaliados</a>
+            <a href="/movie/upcoming">Em Estreia</a>
+        </nav>
+        <div class="header-input">
+            <input id="search-movie" type="text" placeholder="Pesquise um filme">
+            <a href="javascript:void(0)" onclick="searchMovie()"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                <img id="modal-movie-img" src="" alt="">
+                <h3 id="modal-movie-title"></h3>
+                <p id="modal-movie-generos"></p>
+                <p id="modal-movie-overview"></p>
+                <p id="modal-movie-date"></p>
+            </div>
+        </div>
+        
